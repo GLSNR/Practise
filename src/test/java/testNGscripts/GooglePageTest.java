@@ -5,22 +5,64 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class GooglePageTest {
-  @Test
-  public void javaSearchTest() {
-	  
-	  System.out.println("Test");
-	  WebDriver driver = new ChromeDriver();
-	  driver.manage().window().maximize();
-	  driver.navigate().to("https://www.google.com/");
-		
-		WebElement sBox= driver.findElement(By.cssSelector("[name='q']"));
+
+	
+	WebDriver driver = new ChromeDriver();
+	
+
+	@Test
+	public void javaSearchTest() {
+		driver.navigate().to("https://www.google.com/");
+
+		WebElement sBox = driver.findElement(By.cssSelector("[name='q']"));
 		sBox.sendKeys("Java Tutorial");
 		sBox.sendKeys(Keys.ENTER);
-		String title=driver.getTitle();
-		System.out.println("Title..."+title);
-	  
-  }
+		String title = driver.getTitle();
+		System.out.println("Title..." + title);
+
+	}
+
+	@Test
+
+	public void AppiumTest() {
+		driver.navigate().to("https://www.google.com/");
+
+		WebElement sBox = driver.findElement(By.cssSelector("[name='q']"));
+		sBox.sendKeys("Appium Tutorial");
+		sBox.sendKeys(Keys.ENTER);
+		String title = driver.getTitle();
+		System.out.println("Title..." + title);
+
+	}
+
+	@Test
+
+	public void PythonTest() {
+		driver.navigate().to("https://www.google.com/");
+
+		WebElement sBox = driver.findElement(By.cssSelector("[name='q']"));
+		sBox.sendKeys("Phthon Tutorial");
+		sBox.sendKeys(Keys.ENTER);
+		String title = driver.getTitle();
+		System.out.println("Title..." + title);
+
+	}
+
+	@Test
+
+	public void CypressTest() {
+		driver.navigate().to("https://www.google.com/");
+
+		WebElement sBox = driver.findElement(By.cssSelector("[name='q']"));
+		sBox.sendKeys("Cypress Tutorial");
+		sBox.sendKeys(Keys.ENTER);
+		String title = driver.getTitle();
+		System.out.println("Title..." + title);
+
+	}
 }
