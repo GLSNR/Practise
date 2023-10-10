@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGscripts.GooglePageTest">
+      <class name="testNGscripts.ExtentReportsGeneration">
         <methods>
+          <include name="setup"/>
+          <include name="finishExtent"/>
+          <include name="setupExtent"/>
           <include name="javaSearchTest"/>
-          <include name="PythonTest"/>
-          <include name="teardowm"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- testNGscripts.GooglePageTest -->
+      </class> <!-- testNGscripts.ExtentReportsGeneration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
